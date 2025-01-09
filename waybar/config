@@ -1,0 +1,95 @@
+{
+  "layer": "top",
+  "modules-left": ["clock", "temperature", "cpu", "memory"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery", "custom/keyboard"],
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "tooltip": false,
+    "all-outputs": true,
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "active": "",
+      "default": ""
+    },
+    "active-only": false,
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "*": 5
+    },
+    "format-active": "<span color'>{icon}</span>",
+    "format-inactive": "<span color='#372B48'>{icon}</span>"
+  },
+  "clock": {
+    "format": "<span color='#ffffff'> </span>{:%I:%M %p   %a, %d %b %Y}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "temperature": {
+    "thermal-zone": 0,
+    "hwmon-path": "/sys/devices/pci0000:00/0000:00:01.3/0000:01:00.0/hwmon/hwmon0/temp1_input",
+    "critical-threshold": 80,
+    "format": "<span color='#FFE6F2'>{icon}</span> {temperatureC}°C",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "cpu": {
+    "format": "<span color='#ffffff'></span> {usage}%",
+    "tooltip": false,
+    "interval": 1
+  },
+  "memory": {
+    "format": "<span color='#ffffff'></span> {used: 0.1f}GB",
+    "tooltip": false,
+    "interval": 1
+  },
+  "backlight": {
+    "device": "amdgpu_bl0",
+    "format": "<span color='#ffffff'>{icon}</span> {percent}%",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+  "pulseaudio": {
+    "format": "<span color='#ffffff'>{icon}</span> {volume}%",
+    "format-muted": "<span color='#ffffff'></span> Muted",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol"
+  },
+  "bluetooth": {
+    "format": "<span color='#ffffff'></span> {status}",
+    "format-disabled": "",
+    "format-connected": "<span color='#ffffff'></span> {num_connections}",
+    "tooltip-format": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
+  },
+  "network": {
+    "interface": "wlp0s20f3",
+    "format": "{ifname}",
+    "format-wifi": "<span color='#ffffff'></span> {essid}",
+    "format-ethernet": "<span color='#ffffff'></span> {ipaddr}/{cidr}",
+    "format-disconnected": "<span color='#ffffff'></span> No Wifi",
+    "tooltip": false,
+    "max-length": 50
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "<span color='#ffffff'>{icon}</span> {capacity}%",
+    "format-charging": "<span color='#ffffff'></span> {capacity}%",
+    "format-plugged": "<span color='#ffffff'></span> {capacity}%",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+}

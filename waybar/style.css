@@ -1,0 +1,98 @@
+* {
+  border: none;
+  font-family: 'Fira Code', 'Symbols Nerd Font Mono';
+  font-size: 15px;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+  min-height: 35px;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+#custom-arch, #workspaces {
+  border-radius: 10px;
+  background-color: rgba(26, 22, 37, 0.9);
+  color: #DEC4E0;
+  margin-top: 4px;
+  margin-right: 15px;
+  padding-top: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#custom-arch {
+  font-size: 20px;
+  margin-left: 15px;
+  color: #FFA6C9;
+}
+
+#workspaces button {
+  background: transparent;
+  color: #DEC4E0;
+}
+
+#workspaces button.active {
+  background: rgba(222, 196, 224, 0.9);
+  color: #1A1625;
+  border-radius: 0px;
+  margin-top:-1px;
+}
+
+#clock, #backlight, #pulseaudio, #bluetooth, #network, #battery{
+  border-radius: 10px;
+  background-color: rgba(26, 22, 37, 0.9);
+  color: #FFE6F2;
+  margin-top: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 15px;
+}
+
+#clock{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#backlight, #bluetooth {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-right: 5px;
+  margin-right: 0
+}
+
+#pulseaudio, #network {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 5px;
+}
+
+#temperature, #cpu, #memory, #custom-keyboard {
+  background-color: rgba(26, 22, 37, 0.9);
+  color: #FFE6F2;
+  margin-top: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#temperature{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#memory{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#temperature {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-right: 5px;
+  margin-right: 0
+}
+
+#memory {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

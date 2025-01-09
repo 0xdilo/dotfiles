@@ -1,0 +1,53 @@
+# ~/.config/starship.toml
+# General format
+format = """
+[░▒▓](#FFA6C9 bold)[🎀](#FFB2E2 bold)$directory$git_branch$git_status$python$rust$nodejs
+[│](#FFA6C9)
+[╰─](#FFA6C9)$character"""
+
+# Prompt character
+[character]
+success_symbol = "[🌸](#FFB2E2 bold)"
+error_symbol = "[💝](#FF9EC4 bold)"
+
+# Directory
+[directory]
+style = "bold #DEC4E0"
+read_only = "🔮"
+truncation_length = 3
+truncate_to_repo = true
+
+# Git branch
+[git_branch]
+symbol = "🌺 "
+style = "bold #C4A6FF"
+
+# Git status
+[git_status]
+style = "bold #E2C4FF"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = "✨${count}"
+modified = "🎭${count}"
+staged = "🌟${count}"
+
+# Python
+[python]
+disabled = true
+
+# Rust
+[rust]
+symbol = "🎪 "
+style = "bold #BDB2FF"
+
+# Node.js
+[nodejs]
+symbol = "🍨 "
+style = "bold #FFB2E2"
+
+# Battery (optional)
+[battery]
+full_symbol = "🌸"
+charging_symbol = "✨"
+discharging_symbol = "🎀"
